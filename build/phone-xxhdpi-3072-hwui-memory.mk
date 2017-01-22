@@ -1,9 +1,5 @@
 #
-<<<<<<< HEAD
-# Copyright (C) 2014 The CyanogenMod Project
-=======
 # Copyright (C) 2016 The CyanogenMod Project
->>>>>>> 1ac284212... Add dalvik heap/hwui overrides for xxhdpi phone with 3072MB RAM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
