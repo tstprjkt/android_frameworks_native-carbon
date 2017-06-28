@@ -68,6 +68,10 @@ ifneq ($(filter address,$(SANITIZE_TARGET)),)
   LOCAL_CFLAGS_64 += -DEGL_WRAPPER_DIR=\"/$(TARGET_COPY_OUT_DATA)/lib64\"
 endif
 
+ifeq ($(BOARD_FORCECALL_GETDISPLAY),true)
+  LOCAL_CFLAGS += -DBOARD_FORCECALL_GETDISPLAY
+endif
+
 LOCAL_REQUIRED_MODULES := $(egl.cfg_config_module)
 egl.cfg_config_module :=
 

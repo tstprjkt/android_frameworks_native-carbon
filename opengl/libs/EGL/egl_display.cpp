@@ -154,6 +154,9 @@ EGLBoolean egl_display_t::initialize(EGLint *major, EGLint *minor) {
         cnx->major = -1;
         cnx->minor = -1;
         if (cnx->dso) {
+#ifdef BOARD_FORCECALL_GETDISPLAY
+            disp.dpy = cnx->egl.eglGetDisplay(EGL_DEFAULT_DISPLAY);
+#endif
             EGLDisplay idpy = disp.dpy;
             if (cnx->egl.eglInitialize(idpy, &cnx->major, &cnx->minor)) {
                 //ALOGD("initialized dpy=%p, ver=%d.%d, cnx=%p",
