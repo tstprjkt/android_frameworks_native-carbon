@@ -132,11 +132,17 @@ cc_library {
         "-Wextra",
         "-Werror",
         "-Wzero-as-null-pointer-constant",
+        "-O3",
+        "-g0",
     ],
     product_variables: {
         binder32bit: {
             cflags: ["-DBINDER_IPC_32BIT=1"],
         },
+    },
+
+    lto: {
+        thin: true,
     },
 
     shared_libs: [
