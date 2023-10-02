@@ -21,6 +21,8 @@ cc_library {
         "-Wall",
         "-Wextra",
         "-Werror",
+        "-O3",
+        "-g0",
     ],
     srcs: [
         "Input.cpp",
@@ -39,6 +41,10 @@ cc_library {
         "liblog",
         "libcutils",
     ],
+
+    lto: {
+        full: true,
+    },
 
     target: {
         android: {
