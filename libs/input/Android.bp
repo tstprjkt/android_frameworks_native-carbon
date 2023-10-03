@@ -42,10 +42,6 @@ cc_library {
         "libcutils",
     ],
 
-    lto: {
-        full: true,
-    },
-
     target: {
         android: {
             srcs: [
