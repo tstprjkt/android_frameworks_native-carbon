@@ -141,10 +141,6 @@ cc_library {
         },
     },
 
-    lto: {
-        full: true,
-    },
-
     shared_libs: [
         "liblog",
         "libcutils",
