@@ -11,9 +11,6 @@ cc_defaults {
         "-O3",
         "-g0",
     ],
-    lto: {
-        full: true,
-    },
 }
 
 cc_defaults {
